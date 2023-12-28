@@ -7,26 +7,29 @@ const SocialMedia = () => {
         size="small"
         ariaLabel="Whatsapp"
         icon={
-          <i className="bx bxl-whatsapp text-xl text-grey dark:hover:text-blue" />
+          <i className="bx bxl-whatsapp text-xl text-grey hover:text-blue" />
         }
+        href="https://api.whatsapp.com/send?phone=0573146816250&text=Hola Carolina !"
       />
       <IconButtonCustom
         size="small"
         ariaLabel="GitHub"
-        icon={<i className="bx bxl-github text-xl text-grey dark:hover:text-blue" />}
+        icon={<i className="bx bxl-github text-xl text-grey hover:text-blue" />}
+        href="https://github.com/caro1017"
       />
       <IconButtonCustom
         size="small"
         ariaLabel="Linkedin"
         icon={
-          <i className="bx bxl-linkedin text-xl text-grey dark:hover:text-blue" />
+          <i className="bx bxl-linkedin text-xl text-grey hover:text-blue" />
         }
+        href="https://www.linkedin.com/in/carolina-uribe-botero-7b0839195/"
       />
       <IconButtonCustom
         size="small"
         ariaLabel="Behance"
         icon={
-          <i className="bx bxl-behance text-xl text-grey dark:hover:text-blue" />
+          <i className="bx bxl-behance text-xl text-grey hover:text-blue" />
         }
       />
     </div>

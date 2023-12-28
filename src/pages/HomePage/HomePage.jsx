@@ -7,6 +7,7 @@ import ContactMe from "../../components/ContactMe/ContactMe";
 import Author from "../../components/Author/Author";
 import ScrollButton from "../../components/Buttons/ScrollButton/ScrollButton";
 
+
 const HomePage = () => {
   return (
     <>

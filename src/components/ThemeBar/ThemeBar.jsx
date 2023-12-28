@@ -28,9 +28,9 @@ const ThemeBar = () => {
     <div>
       <IconButton aria-label="Toggle theme" onClick={handleIconChange}>
         {isDarkMode ? (
-          <i className="bx bx-moon text-grey text-lg" />
+          <i className="bx bx-moon text-grey hover:text-blue text-lg " />
         ) : (
-          <i className="bx bx-sun text-grey text-xl" />
+          <i className="bx bx-sun text-grey hover:text-blue text-xl" />
         )}
       </IconButton>
     </div>

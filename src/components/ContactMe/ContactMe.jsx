@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-target-blank */
 import { Images } from "../../images/Images";
 import BasicButton from "../Buttons/BasicButton/BasicButton";
 import useTranslations from "../../hooks/useTranslations";
@@ -9,7 +10,11 @@ const ContactMe = () => {
     <section id="contactMe">
       <div className="flex justify-center space-x-20   md:space-x-32 mb-20">
         <div className="mt-16 md:mt-10">
-          <img src={Images.lightLogo} alt="Logo Cubo" className="md:w-28 w-20" />
+          <img
+            src={Images.lightLogo}
+            alt="Logo Cubo"
+            className="md:w-28 w-20"
+          />
         </div>
 
         <div>
@@ -21,11 +26,12 @@ const ContactMe = () => {
             />
             <p className="ml-2">{lang.writeMe}</p>
           </div>
-
-          <BasicButton
-            title={lang.titleButton.contact}
-            icon={<i className="bx bx-mail-send" />}
-          />
+          <a href="mailto:uribebotero.carolina@gmail.com" target="_blank">
+            <BasicButton
+              title={lang.titleButton.contact}
+              icon={<i className="bx bx-mail-send" />}
+            />
+          </a>
         </div>
       </div>
     </section>

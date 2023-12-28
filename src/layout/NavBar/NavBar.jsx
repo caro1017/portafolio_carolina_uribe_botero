@@ -61,7 +61,7 @@ const NavBar = () => {
   return (
     <>
       <div className="flex justify-center">
-        <div className="max-w-screen-lg w-full ml-32 md:ml-52">
+        <div className="max-w-screen-lg w-full ml-32 md:ml-60">
           <div className="text-center py-16">
             <div className="flex justify-center">
               <Logo />
@@ -70,19 +70,19 @@ const NavBar = () => {
             <div className="uppercase space-x-4 tracking-wide text-sm mt-4 hidden md:flex md:justify-center font-medium">
               <a
                 href="#about"
-                className="hover:underline hover:decoration-wavy"
+                className="hover:underline hover:decoration-wavy hover:decoration-blue"
               >
                 {lang.navbar.about}
               </a>
               <a
                 href="#projects"
-                className="hover:underline hover:decoration-wavy "
+                className="hover:underline hover:decoration-wavy hover:decoration-blue"
               >
                 {lang.navbar.projects}
               </a>
               <a
                 href="#contactMe"
-                className="hover:underline hover:decoration-wavy "
+                className="hover:underline hover:decoration-wavy hover:decoration-blue "
               >
                 {lang.navbar.contact}
               </a>

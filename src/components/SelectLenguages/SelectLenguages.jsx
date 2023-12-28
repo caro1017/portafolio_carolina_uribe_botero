@@ -32,7 +32,9 @@ export const SelectLenguages = () => {
         aria-haspopup="true"
         aria-expanded={open ? "true" : undefined}
         onClick={handleClick}
-        endIcon={<KeyboardArrowDownIcon className="text-grey" />}
+        endIcon={
+          <KeyboardArrowDownIcon className="text-grey" />
+        }
         className="text-grey tracking-wide"
       >
         {selectedOption}

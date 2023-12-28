@@ -32,7 +32,7 @@ import ScreenTraning from "../../public/img/training/screen_training.png";
 import LogoTraning from "../../public/img/training/logo_training.svg";
 /* 2VM Rediseño */
 import Img2VM from "../../public/img/2VM_Rediseño/img_2vm.png";
-import Screen2VM from "../../public/img/2VM_Rediseño/img_2vm.png";
+import Screen2VM from "../../public/img/2VM_Rediseño/screen_2vm.png";
 import Logo2VM from "../../public/img/2VM_Rediseño/logo_2vm.png";
 /* Asis Rediseño */
 import ImgGrupoAsis from "../../public/img/asis_Rediseño/img_asis.png";

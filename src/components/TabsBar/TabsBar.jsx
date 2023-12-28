@@ -33,9 +33,9 @@ const TabsBar = ({
           aria-label="Custom Tabs"
           textColor="inherit"
         >
-          <Tab label={titleTab1} className="dark:text-blue" />
-          <Tab label={titleTab2} className="dark:text-blue" />
-          <Tab label={titleTab3} className="dark:text-blue" />
+          <Tab label={titleTab1} className="text-blue" />
+          <Tab label={titleTab2} className="text-blue" />
+          <Tab label={titleTab3} className="text-blue" />
         </AntTabs>
       </div>
       {/* Contenido de las pestañas */}

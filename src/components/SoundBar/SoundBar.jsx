@@ -21,9 +21,9 @@ const SoundBar = () => {
     <div>
       <IconButton aria-label="Cambio tema" onClick={handleIconChange}>
         {isSoundMute ? (
-          <i className="bx bx-volume-mute text-grey text-xl" />
+          <i className="bx bx-volume-mute text-grey hover:text-blue text-xl" />
         ) : (
-          <i className="bx bx-volume-full text-grey text-xl" />
+          <i className="bx bx-volume-full text-grey hover:text-blue text-xl" />
         )}
       </IconButton>
       <audio id="audio" loop>
