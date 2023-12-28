@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { IconButton } from "@mui/material";
 
+import audio from "../../../public/audio/MA_Awesomemusic_ModernInterior.mp4";
+
 const SoundBar = () => {
   // Estado para controlar qué icono se muestra
   const [isSoundMute, setSoundMute] = useState(true);
@@ -27,10 +29,7 @@ const SoundBar = () => {
         )}
       </IconButton>
       <audio id="audio" loop>
-        <source
-          src="../../../public/audio/MA_Awesomemusic_ModernInterior.wav"
-          type="audio/mpeg"
-        />
+        <source src={audio} type="audio/mp4"/>
         Tu navegador no soporta el elemento de audio.
       </audio>
     </div>
