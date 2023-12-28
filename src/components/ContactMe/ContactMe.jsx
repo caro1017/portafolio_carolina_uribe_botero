@@ -1,4 +1,4 @@
-import { Images } from "../../Images/Images";
+import { Images } from "../../images/Images";
 import BasicButton from "../Buttons/BasicButton/BasicButton";
 import useTranslations from "../../hooks/useTranslations";
 

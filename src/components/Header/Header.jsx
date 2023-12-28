@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import SocialMedia from "../SocialMedia/SocialMedia";
-import { Images } from "../../Images/Images";
+import { Images } from "../../images/Images";
 import { useTheme } from "../../hooks/ThemeContext";
 import Scroll from "../Scroll/Scroll";
 /* Video Link */

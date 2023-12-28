@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { Images } from "../../Images/Images";
+import { Images } from "../../images/Images";
 import { dataSkills } from "../../data/dataSkills";
 import useTranslations from "../../hooks/useTranslations";
 

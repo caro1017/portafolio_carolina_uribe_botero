@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Button, Menu, MenuItem } from "@mui/material";
-import { Images } from "../../Images/Images";
+import { Images } from "../../images/Images";
 
 import ThemeBar from "../../components/ThemeBar/ThemeBar";
 import SoundBar from "../../components/SoundBar/SoundBar";
