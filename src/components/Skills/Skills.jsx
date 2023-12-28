@@ -22,11 +22,12 @@ const Skills = () => {
     cloneSkills();
 
     const handleScroll = () => {
+      const container = skillsContainerRef.current;
       if (
-        skillsContainer.scrollLeft + skillsContainer.clientWidth >=
-        skillsContainer.scrollWidth
+        container.scrollLeft + container.clientWidth >= container.scrollWidth
       ) {
         cloneSkills();
+        container.scrollLeft -= container.clientWidth;
       }
     };
 

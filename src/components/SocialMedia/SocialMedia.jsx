@@ -2,7 +2,7 @@ import IconButtonCustom from "../Buttons/IconButtonCustom/IconButtonCustom";
 
 const SocialMedia = () => {
   return (
-    <div className="bg-white dark:bg-black w-10 pl-1 absolute shadow-md mt-48 md:mt-0 rounded-r-lg">
+    <div className="absolute bg-white dark:bg-black w-10 pl-1 shadow-md mt-48 md:mt-0 rounded-r-lg">
       <IconButtonCustom
         size="small"
         ariaLabel="Whatsapp"
