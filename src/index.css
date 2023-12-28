@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: inter, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #919191;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* Estilos para el Scroll */
+body::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 50px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: #91919116;
+  opacity: 0.8;
+}
