@@ -8,6 +8,8 @@ import TabsContentEducation from "../TabsContent/TabsContentEducation/TabsConten
 import BasicButton from "../Buttons/BasicButton/BasicButton";
 import DownloadConfirmationModal from "../ModalBar/DownloadConfirmationModal/DownloadConfirmationModal";
 
+import PdfPortafolio from "../../../public/pdf/Hoja_de_Vida_Carolina_UB.pdf"
+
 const Profile = () => {
   const { lang } = useTranslations();
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -20,7 +22,7 @@ const Profile = () => {
     if (isModalOpen) {
       setIsModalOpen(false);
 
-      fetch("../../../public/pdf/Hoja_de_Vida_Carolina_UB.pdf")
+      fetch(PdfPortafolio)
         .then((res) => res.blob())
         .then((blob) => {
           // Crear un objeto URL para el Blob
