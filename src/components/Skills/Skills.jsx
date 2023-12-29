@@ -1,88 +1,46 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useCallback } from "react";
 import { Images } from "../../images/Images";
 import { dataSkills } from "../../data/dataSkills";
 import useTranslations from "../../hooks/useTranslations";
 
 const Skills = () => {
   const skillsContainerRef = useRef(null);
-  const scrollIntervalRef = useRef(null);
+  const requestRef = useRef(null);
   const { lang } = useTranslations();
-  const [isMoving, setIsMoving] = useState(false);
-  const [startX, setStartX] = useState(null);
-  const [scrollLeft, setScrollLeft] = useState(0);
 
-  useEffect(() => {
+  const cloneSkills = useCallback(() => {
     const skillsContainer = skillsContainerRef.current;
 
-    const cloneSkills = () => {
-      const skillItems = document.querySelectorAll(".skill-item");
-      skillItems.forEach((item) => {
-        const clone = item.cloneNode(true);
-        skillsContainer.appendChild(clone);
-      });
-    };
+    const skillItems = document.querySelectorAll(".skill-item");
+    skillItems.forEach((item) => {
+      const clone = item.cloneNode(true);
+      skillsContainer.appendChild(clone);
+    });
+  }, []);
 
+  const animateScroll = useCallback(() => {
+    const container = skillsContainerRef.current;
+
+    container.scrollLeft += 1;
+
+    if (container.scrollLeft + container.clientWidth >= container.scrollWidth) {
+      cloneSkills();
+      container.scrollLeft -= container.clientWidth;
+    }
+
+    requestRef.current = requestAnimationFrame(animateScroll);
+  }, [cloneSkills]);
+
+  useEffect(() => {
     cloneSkills();
-
-    const handleScroll = () => {
-      const container = skillsContainerRef.current;
-      if (
-        container.scrollLeft + container.clientWidth >=
-        container.scrollWidth
-      ) {
-        cloneSkills();
-        container.scrollLeft -= container.clientWidth;
-      }
-    };
-
-    scrollIntervalRef.current = setInterval(() => {
-      if (!isMoving) {
-        skillsContainer.scrollLeft += 1;
-        handleScroll();
-      }
-    }, 5);
+    requestRef.current = requestAnimationFrame(animateScroll);
 
     return () => {
-      if (scrollIntervalRef.current) {
-        clearInterval(scrollIntervalRef.current);
-      }
+      // Detener la animación al salir del componente
+      cancelAnimationFrame(requestRef.current);
     };
-  }, [isMoving]);
+  }, [animateScroll, cloneSkills]);
 
-  let isScrolling = false;
-
-  const handleStart = (e) => {
-    setIsMoving(true);
-    setStartX(
-      e.type === "touchstart"
-        ? e.touches[0].pageX
-        : e.pageX - skillsContainerRef.current.offsetLeft
-    );
-    setScrollLeft(skillsContainerRef.current.scrollLeft);
-  
-    isScrolling = false;
-  };
-  
-  const handleMove = (e) => {
-    if (!isMoving) return;
-  
-    if (!isScrolling) {
-      e.preventDefault();
-    }
-  
-    const x =
-      e.type === "touchmove"
-        ? e.touches[0].pageX
-        : e.pageX - skillsContainerRef.current.offsetLeft;
-    const walk = (x - startX) * 2; // Adjust scroll speed
-    skillsContainerRef.current.scrollLeft = scrollLeft - walk;
-  
-    isScrolling = true;
-  };
-
-  const handleEnd = () => {
-    setIsMoving(false);
-  };
   return (
     <>
       <div>
@@ -98,15 +56,6 @@ const Skills = () => {
         <div
           className="skills-container flex justify-center overflow-hidden mx-10 mb-20"
           ref={skillsContainerRef}
-          onMouseDown={handleStart}
-          onMouseMove={handleMove}
-          onMouseUp={handleEnd}
-          onMouseLeave={handleEnd}
-          onTouchStart={handleStart}
-          onTouchMove={handleMove}
-          onTouchEnd={handleEnd}
-          onTouchCancel={handleEnd}
-          onTouchMoveCapture={(e) => handleMove(e)}
         >
           {dataSkills.map((skill) => (
             <div key={skill.id} className="skill-item flex-shrink-0 w-32">
