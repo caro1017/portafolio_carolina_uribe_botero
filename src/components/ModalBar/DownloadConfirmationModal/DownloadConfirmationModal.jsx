@@ -11,7 +11,7 @@ const DownloadConfirmationModal = ({ open, onClose, onConfirmDownload }) => {
       onClose={onClose}
       className="flex items-center justify-center"
     >
-      <div className="bg-white dark:bg-black p-10 rounded-md w-[25rem] text-center ">
+      <div className="bg-white dark:bg-black p-10 rounded-md w-[22rem] text-center ">
         <h2 className="text-sm font-bold mb-4 text-blue">
           {lang.modalDownload.thankYou}
         </h2>
@@ -29,7 +29,7 @@ const DownloadConfirmationModal = ({ open, onClose, onConfirmDownload }) => {
             variant="contained"
             className=" dark:text-black border bg-blue hover:bg-blue "
           >
-            {lang.titleButton.download}
+            {lang.titleButton.accept}
           </Button>
         </div>
         <p className="text-xs text-blueOpacity">

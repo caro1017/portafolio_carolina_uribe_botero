@@ -19,13 +19,30 @@ const Profile = () => {
   const handleConfirmDownload = () => {
     if (isModalOpen) {
       setIsModalOpen(false);
-      // Realiza la descarga solo si se confirma desde el botón de Descargar en el modal
-      const downloadLink = document.createElement("a");
-      downloadLink.href = "../../../public/pdf/Hoja_de_Vida_Carolina_UB.pdf";
-      downloadLink.download = "CV_Carolina_UB.pdf";
-      document.body.appendChild(downloadLink);
-      downloadLink.click();
-      document.body.removeChild(downloadLink);
+
+      fetch("../../../public/pdf/Hoja_de_Vida_Carolina_UB.pdf")
+        .then((res) => res.blob())
+        .then((blob) => {
+          // Crear un objeto URL para el Blob
+          const url = window.URL.createObjectURL(blob);
+
+          // Crear un enlace temporal
+          const link = document.createElement("a");
+          link.href = url;
+          link.setAttribute("download", "CV_Carolina_UB.pdf");
+
+          // Simular un clic en el enlace para iniciar la descarga
+          document.body.appendChild(link);
+          link.click();
+
+          // Liberar recursos
+          window.URL.revokeObjectURL(url);
+          document.body.removeChild(link);
+        })
+        .catch((error) => {
+          // Manejar errores de descarga
+          console.error("Error al descargar el archivo:", error);
+        });
     }
   };
 

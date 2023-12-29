@@ -20,6 +20,7 @@ export const languages = {
     titleButton: {
       download: "Descargar CV",
       cancel: "Cancelar",
+      accept: "Ok",
       contact: "Hablemos",
     },
     modalDownload: {
@@ -141,7 +142,13 @@ export const languages = {
         nameProjects: "App Nasa",
         description:
           "Aplicacion para generar la informacion directa de la nasa (Imagen satelital | Autor | Descripcion) Segun la fecha ingresada",
-        technology: ["Figma | ", "React | ", "Material UI | ", "Api Nasa | ", "Versel | "],
+        technology: [
+          "Figma | ",
+          "React | ",
+          "Material UI | ",
+          "Api Nasa | ",
+          "Versel | ",
+        ],
         imgProjects: [Images.imgAppNasa],
         imgScreens: [Images.screenAppNasa],
         imgLogo: [Images.logoAppNasa],
@@ -177,7 +184,13 @@ export const languages = {
         id: uuidv4(),
         nameProjects: "Harley Davinson Landing Page",
         description: "Landing Page inspirada en la marca Harley-Davinson ",
-        technology: ["Figma | ", "Html | ", "Css | ", "JavaScript | ", "Versel | "],
+        technology: [
+          "Figma | ",
+          "Html | ",
+          "Css | ",
+          "JavaScript | ",
+          "Versel | ",
+        ],
         imgProjects: [Images.imgHarleyDavinson],
         imgScreens: [Images.screenHarleyDavinson],
         imgLogo: [Images.logoHarleyDavinson],
@@ -309,6 +322,7 @@ export const languages = {
     titleButton: {
       download: "Download CV",
       cancel: "Cancel",
+      accept: "Ok",
       contact: "Let's talk",
     },
     modalDownload: {
@@ -430,7 +444,13 @@ export const languages = {
         nameProjects: "Nasa App",
         description:
           "Application to generate direct information from NASA (Satellite image | Author | Description) According to the date entered",
-        technology: ["Figma | ", "React | ", "Material UI | ", "Api Nasa | ", "Versel | "],
+        technology: [
+          "Figma | ",
+          "React | ",
+          "Material UI | ",
+          "Api Nasa | ",
+          "Versel | ",
+        ],
         imgProjects: [Images.imgAppNasa],
         imgScreens: [Images.screenAppNasa],
         imgLogo: [Images.logoAppNasa],
@@ -466,7 +486,13 @@ export const languages = {
         id: uuidv4(),
         nameProjects: "Harley Davinson Landing Page",
         description: "Landing Page inspired by the Harley-Davidson brand",
-        technology: ["Figma | ", "Html | ", "Css | ", "JavaScript | ", "Versel | "],
+        technology: [
+          "Figma | ",
+          "Html | ",
+          "Css | ",
+          "JavaScript | ",
+          "Versel | ",
+        ],
         imgProjects: [Images.imgHarleyDavinson],
         imgScreens: [Images.screenHarleyDavinson],
         imgLogo: [Images.logoHarleyDavinson],

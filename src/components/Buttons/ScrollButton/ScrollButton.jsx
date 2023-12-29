@@ -31,7 +31,7 @@ const ScrollButton = () => {
   return (
     <>
       {showButton && (
-        <div className="fixed bottom-24 right-4">
+        <div className="fixed bottom-24 right-5 md:right-8">
           <Fab
             size="small"
             className="bg-blueOpacity hover:bg-blueOpacity  "

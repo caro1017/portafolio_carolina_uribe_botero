@@ -6,6 +6,7 @@ import ThemeBar from "../../components/ThemeBar/ThemeBar";
 import SoundBar from "../../components/SoundBar/SoundBar";
 import { SelectLenguages } from "../../components/SelectLenguages/SelectLenguages";
 import useTranslations from "../../hooks/useTranslations";
+import MenuIcon from "@mui/icons-material/Menu";
 
 const NavBar = () => {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -31,7 +32,7 @@ const NavBar = () => {
         href={item.link}
         onClick={() => handleMenuItemClick(item.link)}
       >
-        <MenuItem>{item.label}</MenuItem>
+        <MenuItem className="uppercase">{item.label}</MenuItem>
       </a>
     ));
   };
@@ -132,7 +133,7 @@ const NavBar = () => {
           aria-expanded={open ? "true" : undefined}
           onClick={handleClick}
         >
-          <i className="bx bx-menu-alt-left text-2xl text-grey" />
+          <MenuIcon className="text-grey" />
         </Button>
       </div>
     </>
