@@ -45,6 +45,7 @@ const Header = () => {
           autoPlay
           loop
           muted
+          playsInline
         />
       </div>
     </>
