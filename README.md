@@ -1,4 +1,4 @@
-# Bendita Tu Eres
+# Portafolio Personal
 
 <img width="700" alt="prototipo" src="https://i.postimg.cc/76V3Fbqx/portafolio.png">
 
