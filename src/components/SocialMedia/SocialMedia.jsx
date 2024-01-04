@@ -31,6 +31,7 @@ const SocialMedia = () => {
         icon={
           <i className="bx bxl-behance text-xl text-grey hover:text-blue" />
         }
+        href="https://www.behance.net/carolinuribeb"
       />
     </div>
   );
