@@ -170,8 +170,8 @@ export const languages = {
 
       {
         id: uuidv4(),
-        nameProjects: "Harley Davinson Landing Page",
-        description: "Landing Page inspirada en la marca Harley-Davinson ",
+        nameProjects: "Harley Davidson Landing Page",
+        description: "Landing Page inspirada en la marca Harley-Davidson ",
         technology: [
           "Figma | ",
           "Html | ",
